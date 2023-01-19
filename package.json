@@ -2,11 +2,15 @@
   "name": "spotify_cover",
   "version": "1.0.0",
   "description": "A web app that generates a custom cover for a music that looks like the spotify player",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "type": "module",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fake Player</title>
+        <link rel="icon" type="image/x-icon" href="/icons/logo.ico">
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+    <body>
+        <img id="heart" src="/icons/heart.png" style="display:none;"/>
+        <img id="heartFilled" src="/icons/heartFilled.png" style="display:none;"/>
+        <img id="shuffle" src="/icons/shuffle.png" style="display:none;"/>
+        <img id="loop" src="/icons/loop.png" style="display:none;"/>
+        <img id="previous" src="/icons/previous.png" style="display:none;"/>
+        <img id="next" src="/icons/next.png" style="display:none;"/>
+        <img id="play" src="/icons/play.png" style="display:none;"/>
+        <img id="pause" src="/icons/pause.png" style="display:none;"/>
+        <div class="container row">
+            <canvas id="preview" width="1080" height="1920"></canvas>
+            <div class="options column">
+                <label>Name:</label>
+                <input value="Music" id="name"/>
+                <label>Authors:</label>
+                <input value="Author" id="author"/>
+                <div class="favourite">
+                    <label for="favourite">Favorite:</label>
+                    <input type="checkbox" name="favourite" id="favourite"/>
+                </div>
+                <div class="play">
+                    <label for="play">Play:</label>
+                    <input type="checkbox" name="play" id="play-pause"/>
+                </div>
+                <label>Time:</label>
+                <div class="time row">
+                    <input type="range" min="0" max="1000" value="500" id="time"/>
+                    <input type="number" min="0" max="59" value="3" id="minutes"/>
+                    <input type="number" min="0" max="59" value="0" id="seconds"/>
+                </div>
+                <label>Cover Image</label>
+                <div class="cover column">
+                    <input type="file" id="cv-image" name="cv-image" accept="image/png, image/jpeg"/>
+                    <label>Brightness</label>
+                    <input type="range" min="0" max="100" value="50" id="brightness"/>
+                </div>
+                <label>Background:</label>
+                <div class="background-options">
+                    <input type="radio" name="background" value="gradient" checked/>
+                    <label>Gradient</label>
+                    <input type="radio" name="background" value="image"/>
+                    <label>Image</label>
+                </div>
+                <div class="background column gradient">
+                    <div class="row">
+                        <input type="color" id="top"/>
+                        <label>Top</label>
+                    </div>
+                    <div class="row">
+                        <input type="color" id="bot"/>
+                        <label>Bottom</label>
+                    </div>
+                </div>
+                <div class="background column image">
+                    <input type="file" id="bg-image" name="bg-image" accept="image/png, image/jpeg"/>
+                    <label>Brightness</label>
+                    <input type="range" min="0" max="100" value="50" id="bg-brightness"/>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="registry.js"></script>
+    <script type="text/javascript" src="drawing.js"></script>
+    <script type="text/javascript" src="render.js"></script>
+</html>
